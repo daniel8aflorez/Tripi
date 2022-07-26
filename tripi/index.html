@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIPI</title>
+
+</head>
+<body>
+    <section>
+        <h1>Tripi</h1>
+        <p>Bienvenidos a Tripi, la plataforma donde puedes calcular el costo de tu próximo viaje</p>  
+
+    <section>
+        <form action="">
+        
+            <h2>Productos</h2>
+            <p>Selecciona en la lista los productos que quieres adicionar en tu carrito de compras</p>
+            <label for="">
+            <input type="checkbox" id="CheckboxVuelos"> Vuelos
+            </label>
+            <label for="">
+            <input type="checkbox" id="Checkboxalojamiento"> Alojamiento
+            </label>
+            <label for="">
+            <input type="checkbox" id="CheckboxTransporte"> Transporte
+            </label>
+            <label for="">
+            <input type="checkbox" id="CheckboxTours"> Tours
+            </label>
+            <label for="">
+            <input type="checkbox" id="CheckboxTarjetas">Tarjeta de asistencia medica
+            </label>
+        </form> <br> <br>   
+
+        <form action="">
+            <label for="inputNumber">Ingresa la cantidad de personas</label>
+            <input type="number" id="inputNumber">
+
+        </form>
+
+<!--         <form action="">
+            <p>Seleccione las fechas de viaje:</p>
+            <label for="fechaSalida">Fecha de Salida </label>
+            <input type="date" name="fechaSalida">
+            <label for="fechaRegreso">Fecha de Regreso </label>
+            <input type="date" name="fechaRegreso">
+        </form> -->
+
+        <form>
+            <p>Seleccione el origen</p>
+            <select name="origen" id="Origen" class="origen">
+                <option value="---">----</option>
+                <option value="Bogotá" name="Bogotá">Bogotá</option>
+                <option value="Medellín">Medellín</option>
+                <option value="Cali">Cali</option>
+            </select>
+        </form>
+
+        
+        <form>
+            <p>Seleccione el Destino</p>
+            <select id="Destino" class="destino">
+                <option value="0">----</option>
+                <option value="1">San Andrés</option>
+                <option value="2">Cartagena</option>
+                <option value="3">Santa Marta</option>
+            </select>
+        </form>
+
+
+    </section>
+
+    <section>
+        <h3>Vuelos</h3>
+        <div id="MensajeVuelos">
+
+        </div>
+        <div id="MensajeVuelos2">
+
+        </div>
+        <div id="MensajeVuelos3">
+
+        </div>
+        <div id="MensajeVuelos4">
+            
+        </div>
+    </section>
+
+    <section>
+        <h3>Alojamiento</h3>
+        <div id="MensajeAlojamiento">
+            
+        </div>
+        <div>
+            <form action="">
+                <label for="inputNights">¿Cuantas noches desea permanecer</label>
+                <input type="number" id="inputNights">
+    
+            </form>
+    
+        </div>
+        
+        <div>
+            <form name="f1">
+                <p>Seleccione el Destino</p>
+                    <select id="Destino" class="destino" onchange="cambiaDestino()">
+                        <option value="0">----</option>
+                        <option value="1">San Andrés</option>
+                        <option value="2">Cartagena</option>
+                        <option value="3">Santa Marta</option>
+                    </select>
+                   <select name="hotel" id="hotel" class="hotel">
+                    <option value="-"></option>
+                   </select>
+        
+            
+            </form>  
+          
+        </div>
+
+    </section>
+    <section>
+        <div id="MensajeVuelos5">
+            
+        </div>
+    </section>
+        </section>
+    <section>
+        <div id="MensajeVuelos6">
+            
+        </div>
+    </section>
+
+    <section>
+        <h3>Transporte</h3>
+        <div id="MensajeTransporte">
+
+        </div>
+    </section>
+    <section>
+        <div id="MensajeVuelos7">
+            
+        </div>
+    </section>
+    <section>
+        <div id="MensajeVuelos8">
+            
+        </div>
+    </section>
+
+    <section>
+        <h3>Tours</h3>
+        <div id="MensajeTours">
+
+        </div>
+       
+        <div>
+            <form name="f2">
+                <p>Seleccione el Destino</p>
+                    <select id="Destino2" class="destino2" onchange="cambiaDestino2()">
+                        <option value="0">----</option>
+                        <option value="1">San Andrés</option>
+                        <option value="2">Cartagena</option>
+                        <option value="3">Santa Marta</option>
+                    </select>
+                   <select name="tour" id="tour" class="tour">
+                    <option value="-"></option>
+                   </select>
+        
+            
+            </form>  
+          
+        </div>
+    </section>
+    <section>
+        <div id="MensajeVuelos9">
+            
+        </div>
+    </section>
+    <section>
+        <div id="MensajeVuelos10">
+            
+        </div>
+    </section>
+
+    <section>
+        <h3>Tarjeta de Asistencia medica</h3>
+        <div id="MensajeAsistencias">
+
+        </div>
+    </section>
+    <section>
+        <div id="MensajeVuelos11">
+            
+        </div>
+    </section>
+    <section>
+        <div id="MensajeVuelos12">
+            
+        </div>
+    </section>
+
+    <section>
+        <h3>Valor final</h3>
+        <div id="MensajeValorFinal">
+            <p>Usted selecciono los siguientes servicios: </p>
+        </div>
+    </section>
+    <section>
+        <div id="MensajeVuelosfinal">
+            
+            
+        </div>
+    </section>
+    <section>
+        <div id="MensajeVuelos13">
+            
+            
+        </div>
+    </section>
+    <section>
+        <div id="Mensajealojamientofinal">
+            
+        </div>
+    </section>
+    <section>
+        <div id="MensajeVuelos14">
+            
+        </div>
+    </section>
+    <section>
+        <div id="Mensajetransportefinal">
+            
+        </div>
+    </section>
+    <section>
+        <div id="MensajeVuelos15">
+            
+        </div>
+    </section>
+    <section>
+        <div id="Mensajetoursfinal">
+            
+        </div>
+    </section>
+    <section>
+        <div id="MensajeVuelos16">
+            
+        </div>
+    </section>
+    <section>
+        <div id="Mensajeasistenciasfinal">
+            
+        </div>
+    </section>
+    <section>
+        <div id="MensajeVuelos17">
+            
+        </div>
+    </section>
+    <section>
+        <div id="MensajevalorTotalfinal">
+            
+        </div>
+    </section>
+    <section>
+        <div id="MensajeVuelos18">
+            
+        </div>
+    </section> <br>
+
+    
+    <script src="./costeoIndex.js"></script>
+       
+</body>
+</html>
